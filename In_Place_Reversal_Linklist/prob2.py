@@ -63,6 +63,6 @@ head.print_function()
 
 res = reverse_sub_List(head, 2, 4)
 
-print("Node of reverse LInklist are: ", end=" ")
+print("Node of reverse Linklist are: ", end=" ")
 res.print_function()
 
