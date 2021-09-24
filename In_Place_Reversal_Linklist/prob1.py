@@ -35,6 +35,18 @@ def reverse(head):
         curr = ahead
     return prev
 
+def reverse_v2(head):
+    # code it here 
+    curr = head 
+    prev, ahead = None, None
+    while curr is not None:
+        ahead = curr.next # 4
+        curr.next = prev # 2 -> NULL
+        prev = curr
+        curr = ahead
+    return prev
+
+
 def main():
     head = Node(2)
     head.next = Node(4)
@@ -44,7 +56,7 @@ def main():
 
     print("Nodes of original LinkedList are: ", end='')
     head.print_list()
-    result = reverse(head)
+    result = reverse_v2(head)
     print("Nodes of reversed LinkedList are: ", end='')
     result.print_list()
 
